@@ -1,0 +1,20 @@
+﻿ClinetSide
+
+
+winexe
+C#
+.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\
+ClinetSide
+none
+false
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\App.xaml
+3-1598562575
+
+12-1427475642
+1951993790079
+MainWindow.xaml;Views\LoginView.xaml;Views\RegisterView.xaml;
+
+False
+
