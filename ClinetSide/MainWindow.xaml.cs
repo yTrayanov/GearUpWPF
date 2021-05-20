@@ -40,6 +40,10 @@ namespace ClientSide
             }
         }
 
-
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.IsLogged = false;
+            Application.Current.Resources["CurrentUser"] = new CurrentUserBindingModel() { User = new UserInfo() };
+        }
     }
 }

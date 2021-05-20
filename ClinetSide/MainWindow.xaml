@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:ClientSide.Views"
-        xmlns:extensions="clr-namespace:ClientSide.Utils"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -65,7 +64,9 @@
                     </Style.Triggers>
                 </Style>
             </TabControl.Resources>
-            <TabItem Header="Cart" >
+            <TabItem Header="Cart" />
+            <TabItem Header="Logout">
+                <Button Name="btnLogout" Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>
             </TabItem>
         </TabControl>
     </Grid>

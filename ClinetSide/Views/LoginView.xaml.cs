@@ -1,6 +1,5 @@
 ﻿using ClientSide.RequestServices;
 using ClientSide.ViewBindingModels;
-using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,10 +23,11 @@ namespace ClientSide.Views
 
             CurrentUserBindingModel data = await this._authService.Login(username, password);
 
-            if(data == null)
+            tbUsername.Text = "";
+            tbPassword.Password = "";
+
+            if (data == null)
             {
-                tbUsername.Text = "";
-                tbPassword.Password = "";
                 MessageBox.Show("Invalid username or password", "Invalid data", MessageBoxButton.OK);
                 return;
             }

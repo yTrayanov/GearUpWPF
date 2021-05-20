@@ -1,7 +1,6 @@
 ﻿using ClientSide.ViewBindingModels;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace ClientSide.RequestServices
 {
