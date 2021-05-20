@@ -15,7 +15,7 @@ namespace ClientSide.RequestServices
                 Email = email
             };
             StringContent data = ParseToJson(user);
-            HttpResponseMessage response = await this.client.PostAsync(this.BaseUrl + "auth/register", data);
+            HttpResponseMessage response = await this.Client.PostAsync(this.BaseUrl + "auth/register", data);
 
             return response;
 
@@ -29,7 +29,7 @@ namespace ClientSide.RequestServices
                 Password = password
             };
             StringContent data = ParseToJson(user);
-            HttpResponseMessage response = await this.client.PostAsync(this.BaseUrl + "auth/login", data);
+            HttpResponseMessage response = await this.Client.PostAsync(this.BaseUrl + "auth/login", data);
 
             if (response.IsSuccessStatusCode)
             {

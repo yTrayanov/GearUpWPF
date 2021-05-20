@@ -17,7 +17,7 @@ namespace ClientSide.RequestServices
 
         protected readonly string BaseUrl = "http://localhost:5000/";
 
-        protected readonly HttpClient client = new HttpClient();
+        protected readonly HttpClient Client = new HttpClient();
 
 
         protected StringContent ParseToJson(object obj)

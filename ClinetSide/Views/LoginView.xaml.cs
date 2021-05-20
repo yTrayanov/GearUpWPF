@@ -38,8 +38,12 @@ namespace ClientSide.Views
             currentUser.User.Username = data.User.Username;
             currentUser.User.IsAdmin = data.User.IsAdmin;
 
-            var property = Application.Current.MainWindow.GetType().GetProperty("IsLogged");
-            property.SetValue(Application.Current.MainWindow, true);
+            Application.Current.MainWindow.GetType().GetProperty("IsLogged").SetValue(Application.Current.MainWindow, true);
+
+            if (data.User.IsAdmin)
+            {
+                Application.Current.MainWindow.GetType().GetProperty("IsAdmin").SetValue(Application.Current.MainWindow, true);
+            }
 
 
         }

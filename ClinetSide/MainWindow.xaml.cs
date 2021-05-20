@@ -10,11 +10,11 @@ namespace ClientSide
     public partial class MainWindow : Window , INotifyPropertyChanged
     {
         private bool isLogged;
+        private bool isAdmin = false;
         public MainWindow()
         {
             InitializeComponent();
             (Application.Current.Resources["CurrentUser"] as CurrentUserBindingModel).User = new UserInfo();
-            Application.Current.Resources["IsLogged"] = false;
             this.DataContext = this;
         }
 
@@ -31,6 +31,19 @@ namespace ClientSide
             }
         }
 
+        public bool IsAdmin 
+        {
+            get { return this.isAdmin; }
+            set
+            {
+                if(value != this.isAdmin)
+                {
+                    this.isAdmin = value;
+                    NotifyPropertyChanged(nameof(IsAdmin));
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -43,6 +56,7 @@ namespace ClientSide
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
             this.IsLogged = false;
+            this.IsAdmin = false;
             Application.Current.Resources["CurrentUser"] = new CurrentUserBindingModel() { User = new UserInfo() };
         }
     }

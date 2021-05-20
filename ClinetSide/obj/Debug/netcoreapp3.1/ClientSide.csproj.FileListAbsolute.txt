@@ -27,3 +27,7 @@ C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.pdb
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.genruntimeconfig.cache
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.csprojAssemblyReference.cache
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\CreateProductView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\CreateProductView.baml
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\AllProductsView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\AllProductsView.baml

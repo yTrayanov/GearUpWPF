@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:ClientSide.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Grid.Resources>
             <Style TargetType="TabItem">
@@ -29,6 +29,7 @@
             </Style>
         </Grid.Resources>
 
+        <!--Tab control for unlogged user-->
         <TabControl Margin="10" BorderBrush="Gainsboro" >
             <TabControl.Resources>
                 <Style TargetType="TabControl">
@@ -51,13 +52,29 @@
             </TabItem>
         </TabControl>
 
+        <!--Tab control for logged user-->
         <TabControl Margin="10" BorderBrush="Gainsboro">
             <TabControl.Resources>
                 <Style TargetType="TabControl">
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsLogged}" Value="True">
-                            <Setter Property="Visibility" Value="Visible" />
-                        </DataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsLogged}" Value="True" />
+                                <Condition Binding="{Binding IsAdmin}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="Visibility" Value="Visible" />
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsLogged}" Value="True" />
+                                <Condition Binding="{Binding IsAdmin}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="Visibility" Value="Hidden" />
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
                         <DataTrigger Binding="{Binding IsLogged}" Value="False">
                             <Setter Property="Visibility" Value="Hidden" />
                         </DataTrigger>
@@ -65,9 +82,53 @@
                 </Style>
             </TabControl.Resources>
             <TabItem Header="Cart" />
+            <TabItem Header="Shop">
+                <views:AllProductsView />
+            </TabItem>
             <TabItem Header="Logout">
-                <Button Name="btnLogout" Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>
+                <Button Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>
             </TabItem>
         </TabControl>
+
+        <!--Tab control for the admin-->
+        <TabControl Margin="10" BorderBrush="Gainsboro">
+            <TabControl.Resources>
+                <Style TargetType="TabControl">
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsLogged}" Value="True" />
+                                <Condition Binding="{Binding IsAdmin}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="Visibility" Value="Visible" />
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsLogged}" Value="True" />
+                                <Condition Binding="{Binding IsAdmin}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="Visibility" Value="Hidden" />
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+
+
+                        <DataTrigger Binding="{Binding IsLogged}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="Create">
+                <views:CreateProductView />
+            </TabItem>
+            <TabItem Header="Logout">
+                <Button Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

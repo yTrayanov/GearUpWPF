@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ClientSide.Views.CreateProductView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientSide.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock FontWeight="Bold" FontSize="26" Margin="10" TextAlignment="Center">Create Product</TextBlock>
+            <StackPanel>
+                <Label Content="Name" />
+                <TextBox Name="tbName"/>
+                <Label Content="ImageUrl" />
+                <TextBox Name="tbImage" />
+                <Label Content="Price" />
+                <TextBox Name="tbPrice" />
+            </StackPanel>
+            <Button Name="btnCreateProduct" Width="150" Margin="15" Click="btnCreateProduct_Click">Create</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
