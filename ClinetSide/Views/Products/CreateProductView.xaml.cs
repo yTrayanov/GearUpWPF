@@ -1,25 +1,14 @@
 ﻿using ClientSide.RequestServices;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace ClientSide.Views
+namespace ClientSide.Views.Products
 {
     /// <summary>
     /// Interaction logic for CreateProduct.xaml
     /// </summary>
-    public partial class CreateProductView : UserControl
+    public partial class CreateProductView : ProductControl
     {
-        private ProductService _productService = new ProductService();
         public CreateProductView()
         {
             InitializeComponent();
@@ -37,7 +26,7 @@ namespace ClientSide.Views
                 return;
             }
 
-            var response = await _productService.CreateProduct(productName, productImage, productPrice);
+            var response = await  (new ProductService()).CreateProduct(productName, productImage, productPrice);
 
             if (!response.IsSuccessStatusCode)
             {

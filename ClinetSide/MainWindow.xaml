@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:ClientSide.Views"
+        xmlns:products="clr-namespace:ClientSide.Views.Products"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
@@ -83,7 +84,7 @@
             </TabControl.Resources>
             <TabItem Header="Cart" />
             <TabItem Header="Shop">
-                <views:AllProductsView />
+                <products:AllProductsView />
             </TabItem>
             <TabItem Header="Logout">
                 <Button Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>
@@ -123,7 +124,7 @@
                 </Style>
             </TabControl.Resources>
             <TabItem Header="Create">
-                <views:CreateProductView />
+                <products:CreateProductView />
             </TabItem>
             <TabItem Header="Logout">
                 <Button Click="btnLogout_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Logout</Button>

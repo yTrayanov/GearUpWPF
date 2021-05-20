@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ClientSide.RequestServices
@@ -20,9 +19,21 @@ namespace ClientSide.RequestServices
 
             var data = ParseToJson(product);
 
-            var response = await Client.PostAsync(BaseUrl + "product/create", data);
+            var response = await Client.PostAsync(BaseUrl + "product/create", data).ConfigureAwait(false);
 
             return response;
+        }
+
+        public async Task<ICollection<Product>> GetAllProducts()
+        {
+            var response = await Client.GetAsync(BaseUrl + "product/all");
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<ICollection<Product>>();
+            }
+
+            return null;
         }
     }
 }
