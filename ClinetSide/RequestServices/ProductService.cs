@@ -35,5 +35,13 @@ namespace ClientSide.RequestServices
 
             return null;
         }
+
+        public async Task<HttpResponseMessage> AddProductToCart(string productId, string userId)
+        {
+            var obj = new { productId, userId };
+            var data = ParseToJson(obj);
+
+            return await Client.PostAsync(BaseUrl + "product/add", data).ConfigureAwait(false);
+        }
     }
 }

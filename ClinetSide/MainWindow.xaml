@@ -27,6 +27,7 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+        
         <ContentControl Grid.Row="1" Style="{StaticResource ResourceKey=NavigationTriggers}" />
     </Grid>
 </Window>

@@ -17,16 +17,15 @@ namespace ClientSide.Views.Products
             lbProducts.ItemsSource = products;
         }
 
-        private void lbProducts_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnAddToCart_Click(object sender, RoutedEventArgs e)
         {
-            if (lbProducts.SelectedItem != null)
+            if(lbProducts.SelectedItem != null)
             {
-                var selected = lbProducts.SelectedItem;
+                string productId = (lbProducts.SelectedItem as Product).Id;
+                string userId = (Application.Current.Resources["CurrentUser"] as CurrentUserBindingModel).User.UserId;
+
+                var response = this.ProductService.AddProductToCart(productId, userId).Result;
             }
         }
     }
