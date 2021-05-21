@@ -3,14 +3,13 @@ using ClientSide.ViewBindingModels;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ClientSide.Views
+namespace ClientSide.Views.Auth
 {
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class LoginView : AuthControl
     {
-        private AuthService _authService = new AuthService();
         public LoginView()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace ClientSide.Views
             string username = tbUsername.Text;
             string password = tbPassword.Password;
 
-            CurrentUserBindingModel data = await this._authService.Login(username, password);
+            CurrentUserBindingModel data = await this.AuthService.Login(username, password);
 
             tbUsername.Text = "";
             tbPassword.Password = "";
@@ -38,6 +37,7 @@ namespace ClientSide.Views
             currentUser.User.Username = data.User.Username;
             currentUser.User.IsAdmin = data.User.IsAdmin;
 
+            Application.Current.Resources["IsLogged"] = true;
             Application.Current.MainWindow.GetType().GetProperty("IsLogged").SetValue(Application.Current.MainWindow, true);
 
             if (data.User.IsAdmin)

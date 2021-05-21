@@ -2,14 +2,13 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ClientSide.Views
+namespace ClientSide.Views.Auth
 {
     /// <summary>
     /// Interaction logic for RegisterView.xaml
     /// </summary>
-    public partial class RegisterView : UserControl
+    public partial class RegisterView : AuthControl
     {
-        private AuthService _authService = new AuthService();
         public RegisterView()
         {
             InitializeComponent();
@@ -26,7 +25,7 @@ namespace ClientSide.Views
             }
 
 
-            var response = await this._authService.Register(username, email, password);
+            var response = await this.AuthService.Register(username, email, password);
 
             if (!response.IsSuccessStatusCode)
                 MessageBox.Show("Invalid data");

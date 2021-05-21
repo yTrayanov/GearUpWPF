@@ -1,5 +1,6 @@
 ﻿using ClientSide.ViewBindingModels;
 using System.ComponentModel;
+using System.Reflection;
 using System.Windows;
 
 namespace ClientSide
@@ -13,8 +14,10 @@ namespace ClientSide
         private bool isAdmin = false;
         public MainWindow()
         {
+
             InitializeComponent();
             (Application.Current.Resources["CurrentUser"] as CurrentUserBindingModel).User = new UserInfo();
+            Application.Current.Resources["IsLogged"] = false;
             this.DataContext = this;
         }
 

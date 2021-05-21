@@ -1,7 +1,8 @@
 ﻿
 FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\App.xaml;;
-FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\MainWindow.xaml;;
-FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Views\LoginView.xaml;;
+FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Resources\ContentStyles.xaml;;
+FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Views\Auth\LoginView.xaml;;
+FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Views\Auth\RegisterView.xaml;;
 FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Views\Products\AllProductsView.xaml;;
 FC:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\Views\Products\CreateProductView.xaml;;
 

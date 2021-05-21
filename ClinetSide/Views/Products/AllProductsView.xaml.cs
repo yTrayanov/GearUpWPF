@@ -1,4 +1,6 @@
 ﻿using ClientSide.RequestServices;
+using ClientSide.ViewBindingModels;
+using System.Windows;
 
 namespace ClientSide.Views.Products
 {
@@ -10,6 +12,7 @@ namespace ClientSide.Views.Products
         public AllProductsView()
         {
             InitializeComponent();
+
             var products = this.ProductService.GetAllProducts().Result;
             lbProducts.ItemsSource = products;
         }
@@ -17,6 +20,14 @@ namespace ClientSide.Views.Products
         private void lbProducts_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbProducts.SelectedItem != null)
+            {
+                var selected = lbProducts.SelectedItem;
+            }
         }
     }
 }

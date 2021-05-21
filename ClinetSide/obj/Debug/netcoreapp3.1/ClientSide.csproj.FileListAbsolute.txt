@@ -1,6 +1,4 @@
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\LoginView.g.cs
-C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\RegisterView.g.cs
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide_MarkupCompile.cache
@@ -14,10 +12,8 @@ C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\bin\Debug\netcoreapp3.
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\RegisterView.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\LoginView.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.g.resources
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.AssemblyInfoInputs.cache
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.AssemblyInfo.cs
@@ -26,8 +22,13 @@ C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.dll
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.pdb
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.genruntimeconfig.cache
-C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.csprojAssemblyReference.cache
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\AllProductsView.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\CreateProductView.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\AllProductsView.g.cs
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\CreateProductView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Auth\RegisterView.baml
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Auth\LoginView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Auth\RegisterView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Auth\LoginView.baml
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.csprojAssemblyReference.cache
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Resources\ContentStyles.baml

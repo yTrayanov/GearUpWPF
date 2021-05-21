@@ -1,0 +1,82 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:auth="clr-namespace:ClientSide.Views.Auth"
+                    xmlns:products="clr-namespace:ClientSide.Views.Products"
+                    >
+
+    <Style x:Key="NavigationListBoxStyles" TargetType="ListBox">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsLogged}" Value="False">
+                <Setter Property="ItemsSource" Value="{StaticResource NavigationAnonymous}" />
+            </DataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsLogged}" Value="True" />
+                    <Condition Binding="{Binding IsAdmin}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="ItemsSource" Value="{StaticResource NavigationUser}" />
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsLogged}" Value="True" />
+                    <Condition Binding="{Binding IsAdmin}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="ItemsSource" Value="{StaticResource NavigationAdmin}" />
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NavigationTriggers" TargetType="ContentControl">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsLogged}" Value="False">
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <auth:LoginView />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Login">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <auth:LoginView />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Register">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <auth:RegisterView />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="CreateProduct">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <products:CreateProductView/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Shop">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <products:AllProductsView/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

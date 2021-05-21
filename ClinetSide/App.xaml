@@ -6,5 +6,22 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <userModel:CurrentUserBindingModel x:Key="CurrentUser" />
+
+
+        <x:Array Type="sys:String" x:Key="NavigationAnonymous">
+            <sys:String>Login</sys:String>
+            <sys:String>Register</sys:String>
+        </x:Array>
+
+        <x:Array Type="sys:String" x:Key="NavigationUser">
+            <sys:String>Cart</sys:String>
+            <sys:String>Shop</sys:String>
+            <sys:String>Logout</sys:String>
+        </x:Array>
+
+        <x:Array Type="sys:String" x:Key="NavigationAdmin">
+            <sys:String>CreateProduct</sys:String>
+            <sys:String>Logout</sys:String>
+        </x:Array>
     </Application.Resources>
 </Application>
