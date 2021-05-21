@@ -26,7 +26,7 @@ namespace ClientSide.RequestServices
 
         public async Task<ICollection<Product>> GetAllProducts()
         {
-            var response = await Client.GetAsync(BaseUrl + "product/all");
+            var response = await Client.GetAsync(BaseUrl + "product/all").ConfigureAwait(false);
 
             if (response.IsSuccessStatusCode)
             {

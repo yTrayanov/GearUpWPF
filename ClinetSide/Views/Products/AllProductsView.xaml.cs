@@ -10,10 +10,13 @@ namespace ClientSide.Views.Products
         public AllProductsView()
         {
             InitializeComponent();
-            //var products = this.ProductService.GetAllProducts().Result;
+            var products = this.ProductService.GetAllProducts().Result;
+            lbProducts.ItemsSource = products;
         }
 
+        private void lbProducts_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
 
-
+        }
     }
 }

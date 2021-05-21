@@ -85,7 +85,7 @@ namespace ClientSide.Views.Products {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClientSide;V1.0.0.0;component/views/products/createproductview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClientSide;component/views/products/createproductview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Products\CreateProductView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
