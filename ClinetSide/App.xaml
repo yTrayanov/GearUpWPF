@@ -22,6 +22,7 @@
 
         <x:Array Type="sys:String" x:Key="NavigationAdmin">
             <sys:String>CreateProduct</sys:String>
+            <sys:String>Products</sys:String>
             <sys:String>Logout</sys:String>
         </x:Array>
     </Application.Resources>

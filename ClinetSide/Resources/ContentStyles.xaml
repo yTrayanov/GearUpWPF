@@ -72,6 +72,16 @@
                 </Setter>
             </DataTrigger>
 
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Products">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <products:AllProductsView/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
             <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Shop">
                 <Setter Property="ContentTemplate" >
                     <Setter.Value>

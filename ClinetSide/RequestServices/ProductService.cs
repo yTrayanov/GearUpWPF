@@ -61,5 +61,10 @@ namespace ClientSide.RequestServices
             var data = this.ParseToJson(new { userId, productId });
             return await Client.PostAsync(this.BaseUrl + "product/user/remove", data).ConfigureAwait(false);
         }
+
+        public async Task<HttpResponseMessage> DeleteProduct(string productId)
+        {
+            return await this.Client.DeleteAsync(BaseUrl + "product/remove/" + productId).ConfigureAwait(false);
+        }
     }
 }
