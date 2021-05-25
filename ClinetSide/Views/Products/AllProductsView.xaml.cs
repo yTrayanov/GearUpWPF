@@ -23,9 +23,11 @@ namespace ClientSide.Views.Products
             if (isAdmin)
             {
                 btnRemoveItem.Visibility = Visibility.Visible;
+                btnAddToCart.Visibility = Visibility.Hidden;
             }
             else
             {
+                btnAddToCart.Visibility = Visibility.Visible;
                 btnRemoveItem.Visibility = Visibility.Hidden;
             }
         }
