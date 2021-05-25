@@ -32,3 +32,7 @@ C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Auth\LoginView.baml
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\ClientSide.csprojAssemblyReference.cache
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Resources\ContentStyles.baml
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Orders\UserOrders.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\CartView.g.cs
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Orders\UserOrders.baml
+C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\obj\Debug\netcoreapp3.1\Views\Products\CartView.baml

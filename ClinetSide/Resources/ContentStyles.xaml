@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:auth="clr-namespace:ClientSide.Views.Auth"
                     xmlns:products="clr-namespace:ClientSide.Views.Products"
+                    xmlns:orders="clr-namespace:ClientSide.Views.Orders"
                     >
 
     <Style x:Key="NavigationListBoxStyles" TargetType="ListBox">
@@ -57,6 +58,10 @@
                 </Setter>
             </DataTrigger>
 
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Logout">
+                <Setter Property="auth:Logout.Logout" Value="True"/>
+            </DataTrigger>
+
             <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="CreateProduct">
                 <Setter Property="ContentTemplate" >
                     <Setter.Value>
@@ -76,6 +81,27 @@
                     </Setter.Value>
                 </Setter>
             </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Cart">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <products:CartView/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ElementName=Navigation, Path=SelectedItem}" Value="Orders">
+                <Setter Property="ContentTemplate" >
+                    <Setter.Value>
+                        <DataTemplate>
+                            <orders:UserOrders/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
 
         </Style.Triggers>
     </Style>

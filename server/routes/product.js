@@ -110,6 +110,8 @@ router.post('/user/remove',async (req,res) =>{
     })
 })
 
+//This is for the admin to delete an product internally , still havent implemented
+
 router.delete('/remove/:id', (req,res) =>{
   const productId = req.params.id;
   

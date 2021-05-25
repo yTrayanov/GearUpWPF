@@ -1,4 +1,6 @@
 ﻿using ClientSide.RequestServices;
+using ClientSide.ViewBindingModels;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ClientSide.Views.Products
@@ -10,6 +12,13 @@ namespace ClientSide.Views.Products
             this.ProductService = new ProductService();
         }
 
-        public ProductService ProductService { get; set; }
+        protected ProductService ProductService { get; set; }
+
+        protected string UserId
+        {
+            get {
+                return (Application.Current.Resources["CurrentUser"] as CurrentUserBindingModel).User.UserId;
+            }
+        }
     }
 }

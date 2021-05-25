@@ -16,6 +16,7 @@
         <x:Array Type="sys:String" x:Key="NavigationUser">
             <sys:String>Cart</sys:String>
             <sys:String>Shop</sys:String>
+            <sys:String>Orders</sys:String>
             <sys:String>Logout</sys:String>
         </x:Array>
 

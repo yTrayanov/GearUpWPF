@@ -32,11 +32,16 @@ router.get('/all/:id' , (req, res) => {
 
     User.findById(userId)
     .populate('orders')
+    .populate({
+        path:'orders',
+        populate:{
+            path:'product'
+        }
+    })
         .then(user =>{
-            console.log(user.orders)
             return res.status(200).json(user.orders);
         }).catch(err =>{
-            console.log(error)
+            console.log(err)
         })
 });
 
@@ -48,8 +53,7 @@ router.get('/order/:id' , (req,res) =>{
                 success: false,
                 message: 'Entry does not exists!'
               })
-            }   
-            console.log(order)
+            } 
             return res.status(200).json(order);
         }).catch(err =>{
             console.log(err);

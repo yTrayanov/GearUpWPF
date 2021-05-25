@@ -43,5 +43,23 @@ namespace ClientSide.RequestServices
 
             return await Client.PostAsync(BaseUrl + "product/add", data).ConfigureAwait(false);
         }
+
+        public async Task<ICollection<Product>> GetUserProducts(string userId)
+        {
+            var response = await Client.GetAsync(BaseUrl + "product/user/" + userId).ConfigureAwait(false);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<ICollection<Product>>();
+            }
+
+            return null;
+        }
+
+        public async Task<HttpResponseMessage> RemoveProductFromCart(string userId , string productId)
+        {
+            var data = this.ParseToJson(new { userId, productId });
+            return await Client.PostAsync(this.BaseUrl + "product/user/remove", data).ConfigureAwait(false);
+        }
     }
 }

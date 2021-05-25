@@ -1,7 +1,4 @@
 ﻿using ClientSide.RequestServices;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Controls;
 
 namespace ClientSide.Views.Auth

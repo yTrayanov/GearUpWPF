@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Yavor Trayanov\source\repos\GearUpWPF\ClinetSide\App.xaml
-6-1148696150
+8-1815854175
 
-17-1950977885
+22-1371427701
 1951993790079
-MainWindow.xaml;Resources\ContentStyles.xaml;Views\Auth\LoginView.xaml;Views\Auth\RegisterView.xaml;Views\Products\AllProductsView.xaml;Views\Products\CreateProductView.xaml;
+MainWindow.xaml;Resources\ContentStyles.xaml;Views\Auth\LoginView.xaml;Views\Auth\RegisterView.xaml;Views\Orders\UserOrders.xaml;Views\Products\AllProductsView.xaml;Views\Products\CartView.xaml;Views\Products\CreateProductView.xaml;
 
 False
 

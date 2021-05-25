@@ -12,6 +12,7 @@ namespace ClientSide
     {
         private bool isLogged;
         private bool isAdmin = false;
+
         public MainWindow()
         {
 
@@ -56,7 +57,8 @@ namespace ClientSide
             }
         }
 
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
+
+        private void Logout()
         {
             this.IsLogged = false;
             this.IsAdmin = false;

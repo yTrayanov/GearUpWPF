@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
         <Button Name="btnAddToCart" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Content="Add to cart" Margin="10" Click="btnAddToCart_Click"/>
-        <ListBox Name="lbProducts" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionMode="Extended">
+        <ListBox Name="lbProducts" SelectionMode="Extended" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <DockPanel Height="100">
